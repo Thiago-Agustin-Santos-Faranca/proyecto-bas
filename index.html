@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAS | Sistema de Asistencia Biónica</title>
+    <link rel="icon" href="img/logo-mano.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo-mano.png" alt="Logo BAS" class="logo-nav">
+            <h1>BAS</h1>
+            <span class="curso">6° 2°</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#sistemas">Nuestros Sistemas</a></li>
+                <li><a href="#hardware">Tecnología</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero bg-blue">
+        <!-- Agregamos "oculto" para que el glassmorphism principal aparezca flotando suavemente -->
+        <div class="hero-content oculto">
+            <img src="img/logo-mano.png" alt="Símbolo BAS" class="hero-logo">
+            <h2>Sistema de Asistencia Biónica</h2>
+            <p>Tecnología accesible que imita y asiste las funciones del cuerpo humano para contribuir a su recuperación y funcionalidad.</p>
+            <a href="#sistemas" class="btn">Conocer el proyecto</a>
+        </div>
+    </section>
+
+    <section id="sistemas" class="section bg-white">
+        <!-- Agregamos "oculto" al título -->
+        <h2 class="section-title oculto">Nuestros Sistemas</h2>
+        <div class="sistemas-container">
+            
+            <!-- Órtesis -->
+            <!-- Agregamos "oculto" a la fila entera para que entre con gracia -->
+            <div class="sistema-row oculto">
+                <div class="sistema-img-container">
+                    <img src="img/foto-ortesis.jpeg" alt="Órtesis BAS" class="sistema-img">
+                </div>
+                <div class="sistema-text card-outline">
+                    <h3>Órtesis Robótica</h3>
+                    <p>Guante diseñado para asistir a pacientes con problemas de movilidad post-ACV, traumatismos o cirugías.</p>
+                    <ul>
+                        <li>Complementa la terapia tradicional en el hogar.</li>
+                        <li>Promueve la neuroplasticidad y mejora la movilidad.</li>
+                        <li>Controlado vía Bluetooth mediante la app BAS.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Prótesis -->
+            <!-- Lo mismo para la prótesis -->
+            <div class="sistema-row reverse oculto">
+                <div class="sistema-img-container">
+                    <img src="img/foto-protesis.jpeg" alt="Prótesis BAS" class="sistema-img">
+                </div>
+                <div class="sistema-text card-outline">
+                    <h3>Prótesis Biónica</h3>
+                    <p>Pensada para personas que han sufrido amputaciones de la mano, reduciendo la brecha de acceso tecnológico.</p>
+                    <ul>
+                        <li>Control natural mediante señales mioeléctricas.</li>
+                        <li>Detección y traducción de contracción muscular.</li>
+                        <li>Alternativa de bajo costo e impresión 3D.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="hardware" class="section bg-blue">
+        <h2 class="section-title text-white oculto">Hardware y Tecnología</h2>
+        <div class="tech-grid">
+            <!-- A las tarjetas les ponemos "oculto" a CADA UNA para que aparezcan escalonadas -->
+            <div class="tech-box oculto">
+                <img src="img/foto-esp32.png" alt="ESP32" class="tech-img">
+                <h4>Microcontrolador ESP32</h4>
+                <p>El cerebro del sistema. Procesa la información y permite la comunicación Bluetooth y Wi-Fi para el control inalámbrico.</p>
+            </div>
+            <div class="tech-box oculto">
+                <img src="img/foto-servos.png" alt="Servomotores" class="tech-img">
+                <h4>Servomotores MG90S</h4>
+                <p>Motores encargados de realizar el movimiento mecánico de flexión y extensión de los dedos con precisión.</p>
+            </div>
+            <div class="tech-box oculto">
+                <img src="img/foto-sensor.png" alt="Sensor EMG" class="tech-img">
+                <h4>Sensor EMG</h4>
+                <p>Componente exclusivo de la prótesis. Detecta la actividad eléctrica generada por el músculo al contraerse.</p>
+            </div>
+            <div class="tech-box oculto">
+                <img src="img/foto-filamento.png" alt="Filamento PLA" class="tech-img">
+                <h4>Impresión 3D (PLA)</h4>
+                <p>Utilizada para fabricar los anillos de las falanges y la estructura de la mano, asegurando bajo costo y personalización.</p>
+            </div>
+        </div>
+    </section>
+
+ <section id="equipo" class="section bg-white">
+        <h2 class="section-title oculto">Equipo</h2>
+        <p class="subtitle oculto">Desarrollado por estudiantes de 6° 2° con el objetivo de crear soluciones inclusivas y seguras.</p>
+        
+        <div class="team-grid">
+            <!-- Integrante 1: Bianca -->
+            <div class="team-card oculto">
+                <div class="foto-circle">
+                    <img src="img/Perfil.png" alt="Perfil Bianca">
+                </div>
+                <h3>Bianca Zamira Brandan</h3>
+                <p class="rol">Diseño y Montaje de Plaquetas y Estudio de Mercado</p>
+                <p class="rol-desc">Diseño y ruteo de las placas de circuito impreso, ensamblado del hardware físico y análisis de viabilidad comercial.</p>
+                <a href="https://www.instagram.com/bbianczb/" target="_blank" class="instagram-link">
+                    <img src="img/icono-instagram.png" alt="IG" class="ig-icon"> @bbianczb
+                </a>
+            </div>
+            
+            <!-- Integrante 2: Thiago -->
+            <div class="team-card oculto">
+                <div class="foto-circle">
+                    <img src="img/Perfil.png" alt="Perfil Thiago">
+                </div>
+                <h3>Thiago Santos Faranca</h3>
+                <p class="rol">Software, Diseño 3D, Web y App Móvil</p>
+                <p class="rol-desc">Programación de la lógica del microcontrolador, modelado 3D, maquetado de la web y desarrollo de la app en Flutter.</p>
+                <a href="https://www.instagram.com/_thiago_faranca/" target="_blank" class="instagram-link">
+                    <img src="img/icono-instagram.png" alt="IG" class="ig-icon"> @_thiago_faranca
+                </a>
+            </div>
+
+            <!-- Integrante 3: Azul -->
+            <div class="team-card oculto">
+                <div class="foto-circle">
+                    <img src="img/Perfil.png" alt="Perfil Azul">
+                </div>
+                <h3>Azul Agostina Teijo</h3>
+                <p class="rol">Dirección, Electrónica y Documentación</p>
+                <p class="rol-desc">Coordinación general, diseño de arquitectura electrónica y redacción integral de la investigación clínica.</p>
+                <a href="https://www.instagram.com/azul.teijo/" target="_blank" class="instagram-link">
+                    <img src="img/icono-instagram.png" alt="IG" class="ig-icon"> @azul.teijo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA INFERIOR (FOOTER) CORREGIDA -->
+    <footer class="site-footer">
+        <!-- El bloque de redes sociales entero entra flotando -->
+        <div class="footer-content oculto">
+            <h3>Contacto & Redes</h3>
+            <div class="social-links">
+                <a href="mailto:basproyecto@gmail.com" target="_blank" class="social-btn">
+                    <img src="img/icono-email.png" alt="Email BAS">
+                    <span>Email</span>
+                </a>
+                <a href="https://www.instagram.com/bas.proyecto/" target="_blank" class="social-btn">
+                    <img src="img/icono-instagram.png" alt="Instagram BAS">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/5491141856284" target="_blank" class="social-btn">
+                    <img src="img/icono-whatsapp.png" alt="WhatsApp BAS">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            <p>&copy; 2026 BAS - Sistema de Asistencia Biónica. Proyecto 6° 2°.</p>
+        </div>
+    </footer>
+<!-- LIBRERÍA VANILLA TILT PARA EL EFECTO 3D EN EL HARDWARE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <!-- ACA CONECTAMOS TU ARCHIVO DE JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
+    <!-- ACA CONECTAMOS EL ARCHIVO DE JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+:root {
+    --bas-blue: #0b0f4f; /* Azul oscuro exacto de tus capturas */
+    --bas-light-blue: #1c2285; /* Azul secundario para tarjetas hardware */
+    --bas-button: #5dade2; /* Celeste para el botón */
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Clases de Fondo */
+.bg-blue { background-color: var(--bas-blue); color: var(--white); }
+.bg-white { background-color: var(--white); color: var(--text-dark); }
+.text-white { color: var(--white) !important; }
+
+
+/* =========================================
+   MENÚ DINÁMICO (SMART HEADER)
+   ========================================= */
+header {
+    position: fixed; /* Clava el menú arriba de todo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menú SIEMPRE esté por encima del resto */
+    background-color: transparent; /* Arranca invisible para fundirse con el fondo azul */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    transition: all 0.4s ease; /* Transición suave de colores */
+    box-sizing: border-box;
+}
+
+/* Esta clase se la pone el JavaScript cuando haces scroll hacia abajo */
+header.scrolled {
+    background-color: rgba(6, 17, 48, 0.95); /* Azul oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Efecto vidrio */
+    padding: 1rem 5%; /* Se achica un poquito */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--white);
+}
+
+.logo-nav {
+    width: 65px !important; 
+    height: 65px !important;
+    background-color: transparent !important; 
+    border-radius: 0 !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+    filter: brightness(0) invert(1) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.7)) !important; 
+}
+
+.hero-logo {
+    width: 250px !important; 
+    height: 250px !important;
+    background-color: transparent !important; 
+    border-radius: 0 !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+    margin: 0 auto 2rem auto !important;
+    display: block !important;
+    box-shadow: none !important; 
+    filter: brightness(0) invert(1) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6)) !important; 
+}
+
+.logo-container h1 { 
+    font-size: 2.8rem !important; 
+    letter-spacing: 2px; 
+    font-weight: 800; 
+    color: var(--white);
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.4); 
+}
+.curso {
+    background-color: var(--white); 
+    color: var(--bas-blue); 
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-left: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 18px; 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background-color: var(--white); 
+    color: var(--bas-blue); 
+    border-color: var(--white);
+}
+
+/* Hero */
+/* Le damos margen arriba al inicio para que el menú flotante no lo tape */
+#inicio {
+    padding-top: 130px; 
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 5%;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffffff; 
+    color: var(--bas-blue); 
+    padding: 0.8rem 2.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15); 
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3); 
+}
+
+/* Sistemas (Imágenes a los costados) */
+.section { padding: 5rem 5%; }
+.section-title { 
+    text-align: center; 
+    font-size: 2.8rem; 
+    font-weight: 800; 
+    color: var(--bas-blue); 
+    margin-bottom: 4rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.sistemas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sistema-row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sistema-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.sistema-img-container {
+    flex: 1;
+}
+
+.sistema-img {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #eee; 
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.card-outline {
+    flex: 1;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-outline h3 {
+    color: var(--bas-blue);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.card-outline ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Hardware Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-box {
+    background-color: var(--bas-light-blue);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 2.5rem 1.5rem; 
+    border-radius: 15px;
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-img {
+    width: 100%;
+    height: 250px !important; 
+    object-fit: contain !important; 
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    background-color: transparent;
+    border: 2px solid #ffffff; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.tech-box h4 {
+    color: var(--white); 
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.tech-box p {
+    color: #d1d5db; 
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Equipo */
+.subtitle { text-align: center; margin-top: -2rem; margin-bottom: 3rem; color: #666; }
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.foto-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--bas-blue);
+    margin: 0 auto 1rem auto;
+    overflow: hidden;
+    background-color: #ddd; 
+}
+
+.foto-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 { font-size: 1.1rem; color: var(--bas-blue); }
+.rol { font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; }
+
+.rol-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem; 
+    color: var(--bas-button);
+    text-decoration: none;
+    font-weight: 700; 
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #f0f4f8;
+    transition: background-color 0.3s;
+}
+
+.instagram-link:hover {
+    background-color: #e2e8f0;
+}
+
+.ig-icon {
+    width: 24px; 
+    height: 24px;
+}
+
+/* Íconos Sociales en Footer */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s;
+    filter: invert(1); 
+}
+
+.social-icon:hover img {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================================
+   SECCIÓN EQUIPO (Efecto asimétrico)
+   ========================================= */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap; 
+    padding: 40px 20px;
+}
+
+.team-card {
+    background: #fff;
+    width: 30%;
+    min-width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:nth-child(2) {
+    transform: translateY(40px); 
+}
+
+.team-card:nth-child(3) {
+    transform: translateY(-15px); 
+}
+
+.team-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-card, .team-card:nth-child(2), .team-card:nth-child(3) {
+        width: 90%;
+        transform: translateY(0); 
+        margin-bottom: 20px;
+    }
+}
+
+/* =========================================
+   BARRA INFERIOR (FOOTER REDES SOCIALES)
+   ========================================= */
+.site-footer {
+    background-color: #0b0f4f; 
+    color: #ffffff;
+    padding: 45px 20px 25px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 4px solid #5dade2; 
+}
+
+.site-footer h3 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px); 
+    border-color: #5dade2; 
+}
+
+.social-btn img {
+    width: 35px; 
+    height: 35px; 
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: #a0aab5;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin: 0;
+}
+
+/* =========================================
+   CAJA PRINCIPAL EFECTO VIDRIO (HERO CONTENT)
+   ========================================= */
+.hero-content {
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 20px; 
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 3rem 2rem; 
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
+}
+
+.hero-content h2 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    padding: 0 15px;
+}
+
+/* =========================================
+   ANIMACIONES JAVASCRIPT (SCROLL REVEAL)
+   ========================================= */
+/* Estas clases las usa JavaScript para hacer aparecer las cosas de a poco */
+.oculto {
+    opacity: 0;
+    transform: translateY(40px); /* Arranca un poco más abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transición súper suave */
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0); /* Sube a su posición original */
+}
